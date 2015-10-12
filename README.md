@@ -1,4 +1,4 @@
-Opauth-SinaWeibo
+Opauth-TencentQQ
 =============
 Opauth strategy for Sina Weibo authentication.
 

@@ -1,0 +1,33 @@
+{
+	"name": "opauth/qq",
+	"description": "Tencent QQ strategy for Opauth",
+	"keywords": ["authentication","auth","qq", "tencent","tencentqq"],
+	"homepage": "http://opauth.org",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "David Grajal Blanco",
+			"email": "dgrabla@gmail.com",
+			"homepage": "http://davidgrajal.com"
+		},
+		{
+			"name": "U-Zyn Chua",
+			"email": "chua@uzyn.com",
+			"homepage": "http://uzyn.com"
+		},
+		{
+		    "name": "Howard Liu",
+		    "email": "fsgmhoward@gmail.com",
+		    "homepage": "http://fsgmhoward.tk"
+		}
+	],
+	"require": {
+		"php": ">=5.2.0",
+		"opauth/opauth": ">=0.2.0"
+	},
+	"autoload": {
+		"psr-0": {
+			"": "."
+		}
+	}
+}

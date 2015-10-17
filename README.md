@@ -9,7 +9,7 @@ Getting started
 0. Make sure your cake installation supports UTF8
 
 1. Install Opauth-Sina:
-   ```bash
+   ```bash 
    cd path_to_opauth/Strategy
    git clone git://github.com/fsgmhoward/opauth-tencentqq.git TencentQQ
    ```

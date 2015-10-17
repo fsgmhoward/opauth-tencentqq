@@ -21,6 +21,8 @@ Getting started
 
 4. Direct user to `http://path_to_opauth/tencentqq` to authenticate
 
+5.If `get_info_from_weibo` is TRUE, please ensure the permission `get_info` is enabled in the API settings and it is in `scope` parameter.
+
 Strategy configuration
 ----------------------
 
@@ -30,7 +32,9 @@ Required parameters:
 <?php
 'TencentQQ' => array(
 	'key' => 'YOUR APP KEY',
-	'secret' => 'YOUR APP SECRET'
+	'secret' => 'YOUR APP SECRET',
+	'scope' => 'get_user_info,get_info',
+	'get_info_from_weibo' => TRUE|FALSE
 )
 ```
 

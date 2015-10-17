@@ -92,6 +92,11 @@ class tencentqqStrategy extends OpauthStrategy{
 					'raw' => $tencentuser
 				);
 			
+			if ($this->strategy['get_info_from_weibo']){
+				$weibouser = $this->getweibouser($token,$uid);
+				$this->auth['raw_weibo'] = $weibouser;
+			}
+
 				if (!empty($tencentuser->name)) $this->auth['info']['name'] = $tencentuser->name;
 				if (!empty($tencentuser->screen_name)) $this->auth['info']['nickname'] = $tencentuser->screen_name;
 				if (!empty($tencentuser->location)) $this->auth['info']['location'] = $tencentuser->location;
@@ -169,5 +174,22 @@ class tencentqqStrategy extends OpauthStrategy{
 
 			$this->errorCallback($error);
 		}
-} 
+    }
+    private function getweibouser($access_token,$uid){
+			$weibouser = $this->serverget('https://graph.qq.com/user/get_info', array('access_token' => $access_token,'openid'=>$uid,'format'=>'json','oauth_consumer_key'=> $this->strategy['key']));
+			if (!empty($weibouser)){
+				return json_decode($weibouser);
+			}
+			else{
+			$error = array(
+				'code' => 'Get User error',
+				'message' => 'Failed when attempting to query for Tencent weibo user information',
+				'raw' => array(
+					'access_token' => $access_token,	
+					'headers' => $headers
+				)
+			);
+			$this->errorCallback($error);
+		}
+	}
 }

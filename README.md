@@ -1,6 +1,6 @@
 Opauth-TencentQQ
 =============
-Opauth strategy for Sina Weibo authentication.
+Opauth strategy for Tencent QQ authentication.
 
 Based on Opauth's Facebook Oauth2 Strategy
 
@@ -8,20 +8,20 @@ Getting started
 ----------------
 0. Make sure your cake installation supports UTF8
 
-1. Install Opauth-Sina:
+1. Install Opauth-TencentQQ:
    ```bash 
    cd path_to_opauth/Strategy
    git clone git://github.com/fsgmhoward/opauth-tencentqq.git TencentQQ
    ```
-2. Create Tencent QQ Application at http://open.qq.com/ or http://connect.qq.com/  <*P.S.: The website data on these two sites are SEPERATED*>
+2. Create Tencent QQ Application at http://open.qq.com/ or http://connect.qq.com/  <**P.S.: The website data on these two sites are SEPERATED**>
    - It is a web application
    - Callback: http://path_to_opauth/qq_callback
 
-3. Configure Opauth-Sina Weibo strategy with `key` and `secret`.
+3. Configure Opauth-TencentQQ strategy with `key` and `secret`.
 
 4. Direct user to `http://path_to_opauth/tencentqq` to authenticate
 
-5.If `get_info_from_weibo` is TRUE, please ensure the permission `get_info` is enabled in the API settings and it is in `scope` parameter.
+5. `get_info_from_weibo` is set TRUE when you want to retrieve information from Tencent Weibo. If `get_info_from_weibo` is set TRUE, please ensure the permission `get_info` is enabled in the API settings and it is in `scope` parameter.
 
 Strategy configuration
 ----------------------
